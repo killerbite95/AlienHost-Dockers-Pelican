@@ -33,7 +33,7 @@
     },
     "file_denylist": [],
     "startup_commands": {
-        "Default": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true $( [[  ! -f unix_args.txt ]] && printf %s \"-jar {{SERVER_JARFILE}}\" || printf %s \"@unix_args.txt\" )"
+        "Default": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Djava.awt.headless=true -Dterminal.jline=false -Dterminal.ansi=true $( [[  ! -f unix_args.txt ]] && printf %s \"-jar {{SERVER_JARFILE}} nogui\" || printf %s \"@unix_args.txt nogui\" )"
     },
     "config": {
         "files": "{\n    \"server.properties\": {\n        \"parser\": \"properties\",\n        \"find\": {\n            \"server-ip\": \"\",\n            \"server-port\": \"{{server.allocations.default.port}}\",\n            \"query.port\": \"{{server.allocations.default.port}}\",\n           \"enable-query\": \"true\"\n        }\n    }\n}",
