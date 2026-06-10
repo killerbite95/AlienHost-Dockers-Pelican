@@ -37,6 +37,14 @@ fontconfig
 fonts-dejavu-core
 ```
 
+Each image also sets Java headless mode by default:
+
+```dockerfile
+ENV JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
+```
+
+This prevents Forge/Minecraft from trying to open the server GUI inside a container.
+
 ## Build locally
 
 Start Docker Desktop first on Windows. Then run:
