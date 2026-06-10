@@ -1,5 +1,7 @@
 FROM ghcr.io/pelican-eggs/yolks:java_11
 
+ENV JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
+
 USER root
 
 RUN apt-get update \
